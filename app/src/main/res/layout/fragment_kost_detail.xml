@@ -1,14 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".view.KostDetailFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+    <ImageView
+        android:id="@+id/imgKost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@tools:sample/avatars" />
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/txtNamaKos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Nama Kos"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/imgKost"
+        app:layout_constraintStart_toStartOf="@+id/imgKost"
+        app:layout_constraintTop_toBottomOf="@+id/imgKost" />
+
+    <TextView
+        android:id="@+id/txtJenisKos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Jenis Kos"
+        app:layout_constraintEnd_toEndOf="@+id/txtNamaKos"
+        app:layout_constraintStart_toStartOf="@+id/txtNamaKos"
+        app:layout_constraintTop_toBottomOf="@+id/txtNamaKos" />
+
+    <TextView
+        android:id="@+id/txtPemilik"
+        android:layout_width="303dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:text="Pemilik : "
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtJenisKos" />
+
+    <TextView
+        android:id="@+id/txtAlamatDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Alamat :"
+        app:layout_constraintStart_toStartOf="@+id/txtPemilik"
+        app:layout_constraintTop_toBottomOf="@+id/txtPemilik" />
+
+    <TextView
+        android:id="@+id/txtBiaya"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Biaya : Rp."
+        app:layout_constraintStart_toStartOf="@+id/txtAlamatDetail"
+        app:layout_constraintTop_toBottomOf="@+id/txtAlamatDetail" />
+
+    <TextView
+        android:id="@+id/txtDeskripsi"
+        android:layout_width="363dp"
+        android:layout_height="291dp"
+        android:layout_marginTop="10dp"
+        android:text="Deskripsi"
+        app:layout_constraintStart_toStartOf="@+id/txtBiaya"
+        app:layout_constraintTop_toBottomOf="@+id/txtBiaya" />
+
+    <Button
+        android:id="@+id/buttonPesan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="AJUKAN PESANAN"
+        app:layout_constraintEnd_toEndOf="@+id/txtDeskripsi"
+        app:layout_constraintStart_toStartOf="@+id/txtDeskripsi"
+        app:layout_constraintTop_toBottomOf="@+id/txtDeskripsi" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

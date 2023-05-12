@@ -12,9 +12,8 @@ import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.kost_list_item.view.*
 
 
-class KostListAdapter(val kostList:ArrayList<Kost>)
-    :RecyclerView.Adapter<KostListAdapter.KostViewHolder>()
-{
+class KostListAdapter(val kostList:ArrayList<Kost>) :RecyclerView.
+Adapter<KostListAdapter.KostViewHolder>() {
     class KostViewHolder(var view: View) : RecyclerView.ViewHolder(view)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): KostViewHolder {
@@ -23,9 +22,7 @@ class KostListAdapter(val kostList:ArrayList<Kost>)
         return KostViewHolder(view)
     }
 
-    override fun getItemCount(): Int {
-        return kostList.size
-    }
+    override fun getItemCount() = kostList.size
 
     override fun onBindViewHolder(holder: KostViewHolder, position: Int) {
         holder.view.txtNamaKost.text = kostList[position].name
