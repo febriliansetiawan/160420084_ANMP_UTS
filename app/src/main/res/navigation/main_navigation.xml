@@ -7,13 +7,17 @@
     <fragment
         android:id="@+id/kostDetailFragment"
         android:name="com.example.a160420084_uts_anmp.view.KostDetailFragment"
-        android:label="fragment_kost_detail"
-        tools:layout="@layout/fragment_kost_detail" />
+        android:label="Detail Kos"
+        tools:layout="@layout/fragment_kost_detail">
+        <argument
+            android:name="nama_kos"
+            app:argType="string" />
+    </fragment>
     <fragment
         android:id="@+id/itemHome"
         android:name="com.example.a160420084_uts_anmp.view.MainFragment"
-        android:label="fragment_main"
-        tools:layout="@layout/fragment_main" >
+        android:label="List  Kos"
+        tools:layout="@layout/fragment_main">
         <action
             android:id="@+id/actionKostDetailFragment"
             app:destination="@id/kostDetailFragment" />
@@ -21,16 +25,16 @@
     <fragment
         android:id="@+id/itemProfile"
         android:name="com.example.a160420084_uts_anmp.view.ProfileFragment"
-        android:label="fragment_profile"
+        android:label="Profil"
         tools:layout="@layout/fragment_profile" />
     <fragment
         android:id="@+id/itemFavorite"
         android:name="com.example.a160420084_uts_anmp.view.FavoriteFragment"
-        android:label="fragment_favorite"
+        android:label="Favorite"
         tools:layout="@layout/fragment_favorite" />
     <fragment
         android:id="@+id/itemPromo"
         android:name="com.example.a160420084_uts_anmp.view.PromoFragment"
-        android:label="fragment_promo"
+        android:label="Promo"
         tools:layout="@layout/fragment_promo" />
 </navigation>

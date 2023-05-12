@@ -30,7 +30,8 @@ Adapter<KostListAdapter.KostViewHolder>() {
 
         Picasso.get().load(kostList[position].photoUrl).into(holder.view.imageKost)
         holder.view.buttonDetail.setOnClickListener {
-            val action = MainFragmentDirections.actionKostDetailFragment()
+            val nama_kos = kostList[position].name.toString()
+            val action = MainFragmentDirections.actionKostDetailFragment(nama_kos)
             Navigation.findNavController(it).navigate(action)
         }
     }
